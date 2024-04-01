@@ -1,6 +1,6 @@
 <x-layout />
 <form method="POST" action="{{ route('create') }}"
-    class="mt-[120px] rounded-md flex justify-center w-[420px] px-4 py-8 flex-col mx-auto bg-sky-500">
+    class="mt-[120px] rounded-md flex justify-center w-[420px] px-4 py-8 flex-col mx-auto bg-sky-900">
     @csrf
     <div class="text-3xl text-center underline pb-2">My Notes</div>
     <div class="mb-3 flex flex-col gap-2">
