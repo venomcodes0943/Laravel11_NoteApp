@@ -5,7 +5,7 @@ use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('addNote');
 })->name('homepage');
 
 // Route Controller Group
