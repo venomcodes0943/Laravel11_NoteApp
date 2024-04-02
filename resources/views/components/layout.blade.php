@@ -12,20 +12,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-900 font-mono">
+<body class="bg-[#0C0C0C] font-mono">
     <div class="container-fluid">
-        <div class="flex bg-gray-500 py-3 items-center justify-between">
+        <div class="flex bg-[#453F78] text-[#FFC94A] py-3 items-center justify-between">
             <div class="px-4">
-                <div class="text-3xl"><a href="#">MyNotes</a></div>
+                <div class="text-3xl"><a href="{{ route('homepage') }}">MyNotes</a></div>
             </div>
             <ul class="flex items-center items-none basis-[55%]">
-                <li class="px-2 font-bold"><a href="#">Add Note</a></li>
-                <li class="px-2 font-bold"><a href="#">Details</a></li>
+                <li class="px-2 font-bold"><a href="{{ route('addNote') }}">Add Note</a></li>
+                <li class="px-2 font-bold"><a href="{{ route('show') }}">Details</a></li>
             </ul>
             <form action="#" class="px-3">
-                <input type="text" class="px-3 bg-gray-100 rounded-md shadow outline-none py-1 mx-3">
+                <input type="text" class="px-3 bg-[#FFC94A] text-black rounded-md shadow outline-none py-1 mx-3">
                 <button type="submit"
-                    class="px-2 py-1 hover:border border-sky-500 text-white outline-none bg-sky-800 rounded-md">Search</button>
+                    class="px-2 py-1 hover:border border-[#FFC94A] text-white outline-none bg-[#C08B5C] rounded-md">Search</button>
             </form>
         </div>
     </div>

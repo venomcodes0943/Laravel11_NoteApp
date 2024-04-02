@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 class NoteController extends Controller
 {
     //
+
+    public function home()
+    {
+        $notes = Note::cursorPaginate(10);
+        return view('home', ['notes' => $notes]);
+    }
     public function createNote(Request $request)
     {
         // we can use validate which is use to validate the input feilds
