@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -23,7 +24,6 @@ class NoteController extends Controller
             'slug' => ['required', 'unique:notes', 'max:255'],
             'body' => 'required',
         ]);
-
         $note = new Note();
         $note->title = $request->title;
         $note->slug = $request->slug;

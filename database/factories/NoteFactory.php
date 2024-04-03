@@ -19,7 +19,7 @@ class NoteFactory extends Factory
         return [
             'title' => fake()->name(),
             'slug' => fake()->slug(3),
-            'body' => fake()->paragraph()
+            'body' => fake()->paragraph(2)
         ];
     }
 }
