@@ -45,4 +45,8 @@ class NoteController extends Controller
         $note->delete();
         return redirect()->route('show');
     }
+    public function addUser()
+    {
+
+    }
 }
