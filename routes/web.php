@@ -16,8 +16,3 @@ Route::group(['prefix' => '/App', 'controller' => NoteController::class], functi
     Route::get('/deleteNote/{note:title}', 'deleteNote')->name('deleteNote');
 });
 
-Route::get('/user', function () {
-    $note = Note::with('user')->get();
-    dd($note);
-    // return $note;
-});
