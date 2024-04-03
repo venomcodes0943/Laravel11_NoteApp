@@ -11,7 +11,12 @@
                     {{ $note->body }}
                 </div>
                 <div class="font-bold text-[14px]">
-                    {{ $note->user->name }}
+                    @if ($note->user != null)
+                        {{ $note->user->name }}
+                    @else
+                        Unknow User
+                    @endif
+
                 </div>
                 <div class="flex mt-1 justify-between items-center">
                     <a href="{{ route('singleNote', $note->slug) }}">
