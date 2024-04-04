@@ -17,6 +17,6 @@ Route::group(['prefix' => '/App', 'controller' => NoteController::class], functi
 });
 
 Route::group(['prefix' => '/App', 'controller' => UserController::class], function () {
-    Route::get('/User', fn() => view('login'))->name('User');
+    Route::get('/addUser', fn() => view('login'))->name('User');
     Route::post('/addUser', 'addUser')->name('addUser');
 });

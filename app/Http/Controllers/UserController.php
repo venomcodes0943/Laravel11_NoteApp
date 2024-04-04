@@ -12,11 +12,15 @@ class UserController extends Controller
     //
     public function addUser(Request $request)
     {
-        $request->validate([
+        $attributes = request()->validate([
             'name' => 'required',
-            'email' => 'required|unique:users',
-            'password' => 'required',
+            'email' => 'required|unique:users|email',
+            'password' => 'required|min:4',
         ]);
+
+        // You can also just store your validation in variable and pass it to model create method but it will insert only feilds that you validate
+
+        // User::create($attributes);
 
         $user = new User();
         $user->name = $request->name;
@@ -25,6 +29,7 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->remember_token = Str::random(10);
         $user->save();
+
         return redirect()->route('User');
     }
 
