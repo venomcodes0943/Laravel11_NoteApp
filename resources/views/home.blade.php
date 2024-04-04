@@ -28,6 +28,11 @@
             </div>
         @endforeach
     </div>
+    @if (session()->has('success'))
+        <div class="bg-red-500 fixed bottom-2 left-3 p-2 rounded-md" id="message">
+            {{ session('success') }}
+        </div>
+    @endif
 @else
     <div class="text-6xl pt-5 text-center text-white">No Notes Yet 😴</div>
 @endif

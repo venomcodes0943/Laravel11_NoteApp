@@ -10,6 +10,8 @@
         href="https://th.bing.com/th/id/R.b3b644aa4995aee815fb831d715c4c68?rik=xmFh2anLSp0SDQ&pid=ImgRaw&r=0"
         type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="hide.js"></script>
+
 </head>
 
 <body class="bg-[#0C0C0C] font-mono">
@@ -20,6 +22,7 @@
             </div>
             <ul class="flex items-center items-none basis-[55%]">
                 <li class="px-2 font-bold"><a href="{{ route('addNote') }}">Add Note</a></li>
+                <li class="px-2 font-bold"><a href="{{ route('addUser') }}">Add User</a></li>
                 <li class="px-2 font-bold"><a href="{{ route('show') }}">Details</a></li>
             </ul>
             <form action="#" class="px-3">

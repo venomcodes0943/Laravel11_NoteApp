@@ -4,7 +4,7 @@
     @csrf
     <div class="mb-3 flex flex-col gap-2">
         <label for="name" class="font-bold">Title:</label>
-        <input type="text" id="name" name="title"
+        <input type="text" id="name" name="title" value="{{ old('title') }}"
             class="rounded-md px-2 bg-gray-900 text-white py-1 outline-none ">
         @error('title')
             <div class="px-3 rounded-md text-red-500 font-bold">
@@ -14,7 +14,7 @@
     </div>
     <div class="mb-3 flex flex-col gap-2">
         <label for="name" class="font-bold">Slug:</label>
-        <input type="text" id="name" name="slug"
+        <input type="text" id="name" name="slug" value="{{ old('slug') }}"
             class="rounded-md px-2 bg-gray-900 text-white py-1 outline-none ">
         @error('slug')
             <div class="px-3 rounded-md text-red-500 font-bold">
@@ -23,9 +23,9 @@
         @enderror
     </div>
     <div class="mb-3 flex flex-col gap-2">
-        <label for="email" class="font-bold">Note :</label>
-        <textarea id="email" cols="30" rows="5" name="body"
-            class="rounded-md px-2 bg-gray-900 text-white py-1 outline-none "></textarea>
+        <label for="body" class="font-bold">Note :</label>
+        <textarea id="body" cols="30" rows="5" name="body"
+            class="rounded-md px-2 bg-gray-900 text-white py-1 outline-none ">{{ old('body') }}</textarea>
         @error('body')
             <div class="px-3 rounded-md text-red-500 font-bold">
                 {{ $message }}
