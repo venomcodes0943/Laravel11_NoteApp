@@ -1,5 +1,5 @@
 <x-layout />
-<div class="p-9 rounded-md bg-[#C08B5C] mt-5 container mx-auto">
+<div class="p-9 rounded-md bg-[#C08B5C] mt-5 w-[650px] container mx-auto">
     <div class="text-2xl font-bold py-3">{{ $record->title }}</div>
     <div class="mb-3 pb-2">{{ $record->body }}</div>
     <div class="mt-5">

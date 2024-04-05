@@ -35,7 +35,4 @@
     <button type="submit"
         class="bg-sky-800 py-3 rounded-sm shadow-lg hover:border border-slate-900 duration-200 hover:font-bold">Add
         Note</button>
-    <a href="{{ route('show') }}"
-        class="bg-sky-800 my-3 py-3 text-center rounded-sm shadow-lg hover:border border-yellow-600 duration-200 hover:font-bold text-yellow-600">Show
-        Note</a>
 </form>

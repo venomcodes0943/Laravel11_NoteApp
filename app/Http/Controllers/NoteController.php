@@ -26,23 +26,14 @@ class NoteController extends Controller
         ]);
         $note = new Note();
         $note->title = $request->title;
-        $note->slug = $request->slug;
+        $note->user_id = random_int(1, 2);
+        $note->slug = strtolower(str_replace(' ', '-', $request->slug));
         $note->body = $request->body;
         $note->save();
-        return redirect()->route('show');
-    }
-    public function showNotes()
-    {
-        $show = Note::all();
-        return view('show', ['data' => $show]);
+        return redirect()->route('homepage');
     }
     public function singleNote(Note $note)
     {
         return view('singleNote', ['record' => $note]);
-    }
-    public function deleteNote(Note $note)
-    {
-        $note->delete();
-        return redirect()->route('show');
     }
 }
