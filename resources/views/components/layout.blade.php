@@ -22,7 +22,11 @@
             </div>
             <ul class="flex items-center items-none">
                 <li class="px-2 font-bold"><a href="{{ route('addNote') }}">Add Note</a></li>
-                <li class="px-2 font-bold"><a href="{{ route('addUser') }}">Add User</a></li>
+                @auth
+                    <li class="px-2 font-bold">Welcome {{ auth()->user()->name }}</li>
+                @else
+                    <li class="px-2 font-bold"><a href="{{ route('addUser') }}">Add User</a></li>
+                @endauth
             </ul>
         </div>
     </div>

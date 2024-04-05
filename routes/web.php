@@ -15,6 +15,7 @@ Route::group(['prefix' => '/App', 'controller' => NoteController::class], functi
 });
 
 Route::group(['prefix' => '/App', 'controller' => UserController::class], function () {
-    Route::get('/addUser', fn() => view('login'))->name('User');
-    Route::post('/addUser', 'addUser')->name('addUser');
+    Route::get('/addUser', fn() => view('login'))->name('User')->middleware('guest');
+    Route::post('/addUser', 'addUser')->name('addUser')->middleware('guest');
 });
+

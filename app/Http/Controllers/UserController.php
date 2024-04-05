@@ -29,10 +29,8 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->remember_token = Str::random(10);
         $user->save();
-
-        session()->flash('success', 'User Successfully Added');
-
-        return redirect()->route('homepage');
+        auth()->login($user);
+        return redirect()->route('homepage')->with('success', 'User Successfully Added');
     }
 
 }
