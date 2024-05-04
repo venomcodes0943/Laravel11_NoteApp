@@ -26,7 +26,7 @@ class NoteController extends Controller
         ]);
         $note = new Note();
         $note->title = $request->title;
-        $note->user_id = random_int(1, 2);
+        $note->user_id = auth()->user()->id;
         $note->slug = strtolower(str_replace(' ', '-', $request->slug));
         $note->body = $request->body;
         $note->save();

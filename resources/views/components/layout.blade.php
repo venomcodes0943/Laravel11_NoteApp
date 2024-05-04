@@ -24,8 +24,10 @@
                 <li class="px-2 font-bold"><a href="{{ route('addNote') }}">Add Note</a></li>
                 @auth
                     <li class="px-2 font-bold">Welcome {{ auth()->user()->name }}</li>
+                    <a href="{{ route('logOut') }}"
+                        class="px-4 py-1 ml-2 bg-[#FFC94A] text-black font-bold rounded-full text-sm">LogOut</a>
                 @else
-                    <li class="px-2 font-bold"><a href="{{ route('addUser') }}">Add User</a></li>
+                    <li class="px-2 font-bold"><a href="{{ route('addUser') }}">Register</a></li>
                 @endauth
             </ul>
         </div>
